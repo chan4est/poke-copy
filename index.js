@@ -21,12 +21,22 @@ var index_html = `
         <meta charset="UTF-8">
         <meta name="viewport" content="width=1280, initial-scale=1">
         <title>Pokemon Copier</title>
+        <style>
+            .grid-container {
+                display: grid;
+            }
+            .btn {
+                height: 5em;
+            }
+        </style>
         <meta name="Pokemon" content="width=device-width, initial-scale=1">
     </head>
 
     <body>
+            <div class="grid-container">
 
-{}
+    {}
+            </div>
 
         <!-- 2. Include library -->
         <script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
@@ -74,7 +84,11 @@ function remove_index() {
 
 function create_index() {
     var index = "";
-    var my_str = '\t\t<button class="btn" data-clipboard-text="{}"> {} - {} </button> </br>\n'
+    var my_str = `\t\t
+        <button class="btn" data-clipboard-text="{}"> 
+            {} - {} 
+        </button> </br>
+    \n`
 
     for (i in poke_map) {
         const row = poke_map[i]
