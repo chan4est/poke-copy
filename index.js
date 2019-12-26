@@ -19,14 +19,19 @@ var index_html = `
 
     <head>
         <meta charset="UTF-8">
-        <meta name="viewport" content="width=1280, initial-scale=1">
         <title>Pokemon Copier</title>
         <style>
             .grid-container {
                 display: grid;
+                background-color: #2196F3;
+                padding: 10px;
             }
             .btn {
-                height: 5em;
+                background-color: rgba(255, 255, 255, 0.8);
+                border: 1px solid rgba(0, 0, 0, 0.8);
+                padding: 20px;
+                font-size: 30px;
+                text-align: center;
             }
         </style>
         <meta name="Pokemon" content="width=device-width, initial-scale=1">
@@ -34,8 +39,7 @@ var index_html = `
 
     <body>
             <div class="grid-container">
-
-    {}
+    {}      
             </div>
 
         <!-- 2. Include library -->
@@ -43,17 +47,7 @@ var index_html = `
 
         <!-- 3. Instantiate clipboard by passing a string selector -->
         <script>
-        var siteWidth = 1280;
-        var scale = screen.width /siteWidth
-        
-        document.querySelector('meta[name="viewport"]').setAttribute('content', 'width='+siteWidth+', initial-scale='+scale+'');
             var clipboard = new ClipboardJS('.btn');
-            clipboard.on('success', function (e) {
-                console.log(e);
-            });
-            clipboard.on('error', function (e) {
-                console.log(e);
-            });
         </script>
     </body>
 
